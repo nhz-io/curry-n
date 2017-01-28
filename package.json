@@ -1,0 +1,44 @@
+{
+  "name": "curry-n",
+  "description": "Curry a function with specified arity",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "ava --watch --verbose",
+    "coverage": "nyc --reporter=lcov ava",
+    "report": "node -e \"require('open')('./coverage/lcov-report/index.html')\"",
+    "test": "ava --verbose",
+    "lint": "eslint *.js test --fix",
+    "prepublish": "npm run lint && npm run test",
+    "github": "node -e \"require('open')(require('./package.json').homepage)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhz-io/curry-n.git"
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ],
+  "keywords": [
+    "curry",
+    "curry-n",
+    "nhz.io"
+  ],
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhz-io/curry-n/issues"
+  },
+  "homepage": "https://github.com/nhz-io/curry-n",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "eslint": "^3.14.1",
+    "nyc": "^10.1.2",
+    "open": "0.0.5",
+    "pre-push": "^0.1.1"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

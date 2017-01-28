@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '6'
+deploy:
+  provider: npm
+  email: dev@nhz.io
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
+    repo: nhz-io/curry-n
+  api_key:
+    secure: OGGohjHOxG9mOAGuX17Xcqcesc0EqsoOn9cflRiFVnSRTtW9fKZGum613tECAiRFt36rSHVbjjkfafRKMH2U7PEpjsaUXvpkQQOz4U0USGi1yAhXB3T70lXk5ztBKVZc6sIElHKUER1qdBre+2ihks4WRFG32Rnzt/LekHKLYK2Jtn0goPGxOx3AsaF+yuL98Y2CEgCA1VELgpSvk6bXbVvkMyEZGudyHwkO1uakpMm6W4OIfaKYG1UyMZiItkkXgPh2viuuvTC0bYzM8V7o1LqIZQJ6KOQfd7hjVCPWDNx4FvIbsbp+7glaqDnvAtrZZRDwDJCat3If60nxtWtHc3G1k6xN9SMd+eN0/KyU1GwopmkLLnnju9pzmWqi2+3A8Xfxe29F7Di4dDLm106pEvzIHpm1mYU4ofqXMuINtRaZGX5n0WXXOXuVThbuWsD8HVsC3sk9UBKyWm1g0GXbS12sSq6I6k5khpne4xrtKAbMWc1qNvrUhXjhIQbRgRZURZ9Wk19Q0FavkIIVGCGapB0xWy0sTAwWnbSlSLkET1Uw1EjPV4qseu939WMTFL0ilhazzbfVED/OI8pcv/zIwiJZB6xyBszkNsIYu2vXeaZWgB7wHMQc92RFCJpgeVG48Z6kBK+8r9fpwQxu0bLuc3bUIre4DMD2hFkqerRDs8Q=
