@@ -33,14 +33,19 @@ npm i -S curry-n
 ```javascript
 const curryN = require('curry-n')
 
-const curried = curryN(3, function(first, ...args) {
-    console.log(this, ...args)    
+const curried = curryN(3, function(...args) {
+    console.log(...args)
 })
 
 curried(1, 2, 3)
 curried(1)(2)(3)
 
-curried(1).apply('some this arg', 2)(3)
+const curriedThis = curryN(3, function(...args) {
+    console.log(this, ...args)
+})
+
+curriedThis.call({some: 'this arg'})(1)(2, 3)
+curriedThis(1, 2).call('some this arg')(3)
 ```
 
 ## Dev
